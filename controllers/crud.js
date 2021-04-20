@@ -1,6 +1,6 @@
 const conexion = require('../database/db');
 
-exports.save = (req,res) => {
+exports.saveR = (req,res) => {
     const id_usuario = req.body.id_usuario;
     const fecha = req.body.fecha;
     const instalacion = req.body.instalacion;
@@ -16,7 +16,7 @@ exports.save = (req,res) => {
 }
 
 
-exports.update = (req, res) => {
+exports.updateR = (req, res) => {
     const id = req.body.id;
     const id_usuario = req.body.id_usuario;
     const fecha = req.body.fecha;
@@ -29,4 +29,29 @@ exports.update = (req, res) => {
             res.redirect('/');
         }
     }) 
+}
+
+exports.update = (req, res) => {
+    const id = req.body.id;
+    const nombre = req.body.nombre;
+    const num_personas = req.body.num_personas;
+    conexion.query('UPDATE instalaciones SET ? WHERE id = ?', [{nombre:nombre, num_personas:num_personas}, id], (error, results)=> {
+        if(error){
+            console.log(error);
+        }else{
+            res.redirect('/indexIns');
+        }
+    }) 
+}
+
+exports.save = (req,res) => {
+    const nombre = req.body.nombre;
+    const num_personas = req.body.num_personas;
+    conexion.query('INSERT INTO instalaciones SET ?' ,{nombre:nombre, num_personas:num_personas}, (error, results) => {
+        if(error){
+            console.log(error);
+        }else{
+            res.redirect('/indexIns');
+        }
+    })
 }

@@ -10,7 +10,7 @@
 
     <!-- Boxicons -->
     <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
-    <title> Reservas </title>
+    <title> Instalaciones </title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -38,31 +38,22 @@
           </div>
         </div>
       </nav>
-        <% if (reservas) { %>
+        <% if (instalaciones) { %>
       <div class="container mt-4">
           <div class="card border-secondary">
-               <div class="card-header"> Editar Registro </div> 
+               <div class="card-header"> Editar Instalacion </div> 
                <div class="card-body">
-                    <form action="/updateR" method="POST">
-                        <input id="id"  name="id" value="<%= reservas.id %>" hidden>
-                        <div class="mb-3">
-                            <label for="id_usuario" class="form-label">Usuario</label>
-                            <input type="text" class="form-control" id="id_usuario" name="id_usuario" value="<%= reservas.id_usuario %>" tabindex="1">
-                        </div>
-                        <div class="mb-3">
-                            <label for="fecha" class="form-label">Fecha</label>
-                            <input type="text" class="form-control" id="fecha" name="fecha" value="<%= reservas.fecha %>" tabindex="1">
-                        </div>
+                    <form action="/update" method="POST">
                         <div class="mb-3">
                             <label for="instalacion" class="form-label">Instalacion</label>
-                            <input type="text" class="form-control" id="instalacion" name="instalacion" value="<%= reservas.instalacion %>" tabindex="1">
+                            <input type="text" class="form-control" id="nombre" name="nombre" value="<%= instalaciones.nombre %>" tabindex="1">
                         </div>
                         <div class="mb-3">
                             <label for="num_personas" class="form-label">Numero de Personas</label>
-                            <input type="text" class="form-control" id="num_personas" name="num_personas" value="<%= reservas.num_personas %>" tabindex="1">
+                            <input type="text" class="form-control" id="num_personas" name="num_personas" value="<%= instalaciones.num_personas %>" tabindex="1">
                         </div>
                         <button type="submit" class="btn btn-primary" tabindex="5">Guardar</button> 
-                        <a href="/" class="btn btn-secondary">Cancelar</a>               
+                        <a href="/indexIns" class="btn btn-secondary">Cancelar</a>               
                     </form>
                </div> 
                <% } %>

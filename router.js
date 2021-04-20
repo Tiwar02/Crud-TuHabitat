@@ -49,6 +49,48 @@ router.get('/delete/:id', (req, res) => {
 const crud = require('./controllers/crud');
 router.post('/save', crud.save)
 router.post('/update', crud.update)
+router.post('/saveR', crud.saveR)
+router.post('/updateR', crud.updateR)
 
+
+router.get('/indexIns', (req, res)=>{
+
+    
+    conexion.query('SELECT * FROM instalaciones', (error, results)=>{
+       if(error){
+            throw error;
+        }else{
+            res.render('indexIns' ,{results:results});
+        }
+    }); 
+})
+
+router.get('/createIns', (req, res) => {
+    res.render('createIns');
+})
+
+//RUTA PARA EDITAR 
+router.get('/editIns/:id', (req, res) => {
+    const id = req.params.id;
+    conexion.query('SELECT * FROM instalaciones WHERE id=?',[id], (error,results) =>{
+        if(error){
+            throw error;
+        }else{
+            res.render('editIns' ,{instalaciones:results[0]});
+        }
+    })
+});
+
+router.get('/deleteIns/:id', (req, res) => {
+    const id = req.params.id;
+    conexion.query('DELETE FROM instalaciones WHERE id = ?', [id], (error, results) => {
+        if(error){
+            throw error;
+        }else{
+            res.redirect('/indexIns');
+        }
+    })
+})
 
 module.exports = router;
+
