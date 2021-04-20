@@ -1,0 +1,148 @@
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url(../Poppins/Poppins-Regular.ttf);
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url(../Poppins/Poppins-Bold.ttf);
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins-Light";
+  src: url(../Poppins/Poppins-Light.ttf);
+  font-style: normal;
+}
+body {
+  font-family: "Poppins-Regular";
+}
+/*FORMULARIO DE RESERVA*/
+.texto-reserva {
+  width: 100%;
+  margin-left: 5.5rem;
+  position: relative;
+  bottom: 40%;
+  display: flex;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.264073) 50.14%,
+    rgba(0, 0, 0, 0) 88.47%
+  );
+}
+.texto-reserva > span {
+  padding: 0.5rem;
+}
+#recuadro-amarillo {
+  display: inline-block;
+  width: 2%;
+  background-color: #ffc700;
+  margin-right: 2rem;
+  border-radius: 2px;
+}
+.reserva-formulario {
+  grid-column: 2/3;
+}
+.container-reserva-formulario {
+  display: flex;
+  justify-content: center;
+}
+.form-card {
+  width: 70%;
+  background: rgba(56, 56, 56, 0.85);
+  border-radius: 10px;
+}
+.form-card .form-control {
+  margin: 2.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.form-card .form-control label {
+  color: white;
+  font-family: "Poppins-Light";
+  letter-spacing: 0.11em;
+  font-size: 0.8rem;
+}
+.form-card input[type="text"] {
+  background: #c4c4c4;
+  border-radius: 10px;
+  color: #000;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+.form-card input:focus {
+  outline: none;
+}
+.form-card input[type="text"],
+.btn {
+  width: 100%;
+  border: 0;
+  padding: 0.4rem 1rem 0.4rem 1rem;
+}
+.btn {
+  width: 80%;
+  background: #ffc700;
+  border-radius: 10px;
+  display: inline-block;
+  font-family: "Poppins-Bold";
+  cursor: pointer;
+  margin: auto;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+.btn:hover {
+  transform: scale(1.06);
+}
+/*FORMULARIO DE LOGIN - PÁGINA LOGIN*/
+.btn-Ingresar {
+  background: #181813;
+  color: rgb(185, 185, 185);
+  letter-spacing: 0.11em;
+  padding: 13px 32px 13px 32px;
+}
+
+/*FOOTER*/
+footer {
+  background: #b2b0b0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 9fr 3fr;
+  align-items: center;
+  height: 60vh;
+}
+.container-footer {
+  display: flex;
+}
+footer a {
+  color: black;
+  text-decoration: none;
+}
+footer h3 {
+  font-family: "Poppins-bold";
+  margin-bottom: 2rem;
+}
+.menu-footer {
+  margin-left: 5.5rem;
+}
+.menu-footer ul {
+  list-style: none;
+}
+.menu-footer ul li {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.opiniones-footer {
+  grid-column: 2/3;
+  margin-left: 10rem;
+}
+.tuhabitat {
+  grid-column: 1/-1;
+  grid-row: 2/3;
+  border-top: 1px solid black;
+}
+.tuhabitat p {
+  margin-top: 0.6rem;
+  margin-left: 5.5rem;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="../css/perfil.css" />
+    <link rel="stylesheet" href="../css/reserva.css" />
+    <title>Reserva una instalación</title>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="container-logo">
+          <h1 class="logo">TuHábitat</h1>
+          <p class="slogan">Vivir es una experiencia</p>
+        </div>
+        <nav>
+          <div class="container-usuario">
+            <div class="perfil-usuario">Perfil</div>
+            <div class="soporte">FAQ</div>
+            <div class="salir-perfil">
+              <a href="../pages/index.html">Salir</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="texto-reserva">
+        <span id="recuadro-amarillo"></span>
+        <span>Reserva una instalación</span>
+      </div>
+      <section class="reserva-formulario">
+        <div class="container-reserva-formulario">
+          <form class="form-card">
+            <div class="form-control">
+              <label for="input-Fecha">Fecha</label>
+              <input
+                type="text"
+                class="input"
+                name="Fecha"
+                id="input-Fecha"
+                required
+              />
+            </div>
+            <div class="form-control">
+              <label for="input-Instalacion">Instalación</label>
+              <input
+                type="text"
+                class="input"
+                name="Instalacion"
+                id="input-Instalacion"
+                required
+              />
+            </div>
+            <div class="form-control">
+              <label for="input-Asistentes">Número de asistentes</label>
+              <input
+                type="text"
+                class="input"
+                name="Asistentes"
+                id="input-Asistentes"
+                required
+              />
+            </div>
+            <div class="form-control">
+              <input type="submit" value="Reservar" class="btn btn-Enviar" />
+            </div>
+          </form>
+        </div>
+      </section>
+    </header>
+    <footer>
+      <div class="container-footer">
+        <div class="menu-footer">
+          <h3>Acerca de</h3>
+          <ul>
+            <li><a href="">Políticas de privacidad</a></li>
+            <li><a href="">Condiciones de uso</a></li>
+            <li><a href="">Créditos</a></li>
+          </ul>
+        </div>
+        <div class="opiniones-footer">
+          <h3>Opiniones</h3>
+          <a href="">Lo que dicen nuestros clientes</a>
+        </div>
+      </div>
+      <div class="tuhabitat">
+        <p>&copy; TuHábitat Inc. Todos los derechos reservados</p>
+      </div>
+    </footer>
+  </body>
+</html>

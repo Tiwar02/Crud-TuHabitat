@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="../css/perfil.css" />
+    <link rel="stylesheet" href="../css/reserva.css" />
+    <script src="../javascript/login.js"></script>
+    <title>Inicia sesión en TuHábitat</title>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="container-logo">
+          <h1 class="logo">TuHábitat</h1>
+          <p class="slogan">Vivir es una experiencia</p>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="../pages/index.html">Inicio</a></li>
+            <li><a href="../pages/servicios.html">Servicios</a></li>
+            <li><a href="../pages/index.html#contacto">Contáctanos</a></li>
+          </ul>
+        </nav>
+      </div>
+      <section class="reserva-formulario">
+        <div class="container-reserva-formulario">
+          <form class="form-card">
+            <div class="form-control">
+              <label for="input-Usuario">Usuario</label>
+              <input
+                type="text"
+                class="input"
+                name="Fecha"
+                id="input-Usuario"
+                required
+              />
+            </div>
+            <div class="form-control">
+              <label for="input-Contrasena">Contraseña</label>
+              <input
+                type="password"
+                class="input"
+                name="Instalacion"
+                id="input-Contrasena"
+                required
+              />
+            </div>
+            <div class="form-control">
+              <input
+                type="button"
+                value="Ingresar"
+                class="btn btn-Ingresar"
+                onclick="validar()"
+              />
+            </div>
+          </form>
+        </div>
+      </section>
+    </header>
+    <footer>
+      <div class="container-footer">
+        <div class="menu-footer">
+          <h3>Acerca de</h3>
+          <ul>
+            <li><a href="">Políticas de privacidad</a></li>
+            <li><a href="">Condiciones de uso</a></li>
+            <li><a href="">Créditos</a></li>
+          </ul>
+        </div>
+        <div class="opiniones-footer">
+          <h3>Opiniones</h3>
+          <a href="">Lo que dicen nuestros clientes</a>
+        </div>
+      </div>
+      <div class="tuhabitat">
+        <p>&copy; TuHábitat Inc. Todos los derechos reservados</p>
+      </div>
+    </footer>
+  </body>
+</html>
